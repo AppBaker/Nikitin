@@ -18,3 +18,20 @@ struct Schedule : Codable {
     var weekDay : Int
 }
 
+enum WeekDay: Int {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+}
+
+//case monday = "Monday"
+//case tuesday = "Tuesday"
+//case wednesday = "Wednesday"
+//case thursday = "Thursday"
+//case friday = "Friday"
+//case saturday = "Saturday"
+//case sunday = "Sunday"
