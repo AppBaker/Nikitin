@@ -15,7 +15,6 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var teacherLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
-    @IBOutlet weak var weekDayLabel: UILabel!
     
 
     override func awakeFromNib() {

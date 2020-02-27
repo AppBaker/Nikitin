@@ -10,18 +10,35 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var dataFetchService = DataFetcherService()
-    
-    var scheduel : [Schedule]?
-    
     var weekSchedule = [[Schedule](), [Schedule](), [Schedule](), [Schedule](), [Schedule](), [Schedule](), [Schedule]()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tableView = UITableView()
-        self.view = tableView
-        tableView.dataSource = self
+        let frame = self.view.frame
+        let loadView = UIView(frame: frame)
+        let fonImageView = UIImageView(frame: frame)
+        fonImageView.image = #imageLiteral(resourceName: "fon")
+        
+        let armImage = #imageLiteral(resourceName: "Arm")
+        let armImageView = UIImageView(frame: CGRect(x: frame.width / 2 - 75, y: frame.height / 2 - 75, width: 150, height: 150))
+        armImageView.contentMode = .scaleAspectFit
+        armImageView.image = armImage
+        armImageView.center = view.center
+
+        let actityIndicator = UIActivityIndicatorView(style: .large)
+        actityIndicator.center = view.center
+        actityIndicator.hidesWhenStopped = true
+        actityIndicator.startAnimating()
+        
+        loadView.addSubview(fonImageView)
+        loadView.addSubview(armImageView)
+        loadView.addSubview(actityIndicator)
+        
+        self.view.addSubview(loadView)
         
         dataFetchService.fetchSchedule { (scheduel) in
             guard let scheduel = scheduel else { return }
@@ -29,12 +46,13 @@ class ScheduleViewController: UIViewController {
             for item in scheduel {
                 self.weekSchedule[item.weekDay - 1].append(item)
             }
-            tableView.reloadData()
-            
+            loadView.isHidden = true
+            actityIndicator.stopAnimating()
+            self.tableView.reloadData()
         }
         
+        tableView.dataSource = self
         tableView.register(UINib(nibName: "ScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "scheduleCell")
-        
     }
 }
 
@@ -88,15 +106,6 @@ extension ScheduleViewController: UITableViewDataSource {
         cell.timeLabel.text = "Время занятия: \(scheduel.startTime) - \(scheduel.endTime)"
         cell.teacherLabel.text = "Инструктор: \(scheduel.teacher)"
         cell.placeLabel.text = "Зал: \(scheduel.place)"
-        cell.weekDayLabel.text = String(scheduel.weekDay)
     }
-    
-}
-
-//MARK:- Custom methods
-extension ScheduleViewController {
-    
-    
-    
 }
 
