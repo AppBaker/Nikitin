@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		994BFE6324067EF100984D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE6224067EF100984D31 /* AppDelegate.swift */; };
 		994BFE6524067EF100984D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE6424067EF100984D31 /* SceneDelegate.swift */; };
-		994BFE6724067EF100984D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE6624067EF100984D31 /* ViewController.swift */; };
+		994BFE6724067EF100984D31 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE6624067EF100984D31 /* ScheduleViewController.swift */; };
 		994BFE6A24067EF100984D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994BFE6824067EF100984D31 /* Main.storyboard */; };
 		994BFE6C24067EF300984D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994BFE6B24067EF300984D31 /* Assets.xcassets */; };
 		994BFE6F24067EF300984D31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994BFE6D24067EF300984D31 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,15 @@
 		994BFE7B24068AC700984D31 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE7A24068AC700984D31 /* Networking.swift */; };
 		994BFE7D24068B1D00984D31 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE7C24068B1D00984D31 /* NetworkDataFetcher.swift */; };
 		994BFE7F24068B6F00984D31 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFE7E24068B6F00984D31 /* DataFetcherService.swift */; };
+		99BAAE3B2406B7D400E44208 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BAAE392406B7D400E44208 /* ScheduleTableViewCell.swift */; };
+		99BAAE3C2406B7D400E44208 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BAAE3A2406B7D400E44208 /* ScheduleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		994BFE5F24067EF100984D31 /* Nikitin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nikitin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		994BFE6224067EF100984D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		994BFE6424067EF100984D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		994BFE6624067EF100984D31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		994BFE6624067EF100984D31 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		994BFE6924067EF100984D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		994BFE6B24067EF300984D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994BFE6E24067EF300984D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		994BFE7A24068AC700984D31 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		994BFE7C24068B1D00984D31 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		994BFE7E24068B6F00984D31 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		99BAAE392406B7D400E44208 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		99BAAE3A2406B7D400E44208 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,12 @@
 		994BFE6124067EF100984D31 /* Nikitin */ = {
 			isa = PBXGroup;
 			children = (
+				99BAAE382406B76A00E44208 /* View */,
 				994BFE7924068AAD00984D31 /* NetworkService */,
 				994BFE7624067F6E00984D31 /* Model */,
 				994BFE6224067EF100984D31 /* AppDelegate.swift */,
 				994BFE6424067EF100984D31 /* SceneDelegate.swift */,
-				994BFE6624067EF100984D31 /* ViewController.swift */,
+				994BFE6624067EF100984D31 /* ScheduleViewController.swift */,
 				994BFE6824067EF100984D31 /* Main.storyboard */,
 				994BFE6B24067EF300984D31 /* Assets.xcassets */,
 				994BFE6D24067EF300984D31 /* LaunchScreen.storyboard */,
@@ -93,6 +98,15 @@
 				994BFE7E24068B6F00984D31 /* DataFetcherService.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		99BAAE382406B76A00E44208 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99BAAE392406B7D400E44208 /* ScheduleTableViewCell.swift */,
+				99BAAE3A2406B7D400E44208 /* ScheduleTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +169,7 @@
 			files = (
 				994BFE6F24067EF300984D31 /* LaunchScreen.storyboard in Resources */,
 				994BFE6C24067EF300984D31 /* Assets.xcassets in Resources */,
+				99BAAE3C2406B7D400E44208 /* ScheduleTableViewCell.xib in Resources */,
 				994BFE6A24067EF100984D31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,10 +183,11 @@
 			files = (
 				994BFE7D24068B1D00984D31 /* NetworkDataFetcher.swift in Sources */,
 				994BFE7F24068B6F00984D31 /* DataFetcherService.swift in Sources */,
-				994BFE6724067EF100984D31 /* ViewController.swift in Sources */,
+				994BFE6724067EF100984D31 /* ScheduleViewController.swift in Sources */,
 				994BFE7B24068AC700984D31 /* Networking.swift in Sources */,
 				994BFE6324067EF100984D31 /* AppDelegate.swift in Sources */,
 				994BFE7824067FB700984D31 /* Schedule.swift in Sources */,
+				99BAAE3B2406B7D400E44208 /* ScheduleTableViewCell.swift in Sources */,
 				994BFE6524067EF100984D31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

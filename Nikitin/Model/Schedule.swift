@@ -18,7 +18,7 @@ struct Schedule : Codable {
     var weekDay : Int
 }
 
-enum WeekDay: Int {
+enum WeekDay: Int, Codable {
     case monday
     case tuesday
     case wednesday
@@ -27,6 +27,8 @@ enum WeekDay: Int {
     case saturday
     case sunday
 }
+
+let wd = WeekDay.monday
 
 //case monday = "Monday"
 //case tuesday = "Tuesday"
